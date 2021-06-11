@@ -7,11 +7,10 @@ use Illuminate\Http\Request;
 
 class DonorController extends Controller
 {
-    public function show(Donor $donor)
+    public function donors()
     {
-        // dd($donor);
-        return view('dashboard', [
-            'donors' => $donor
+        return view('donors', [
+            'donors' => Donor::all()
         ]);
     }
 }

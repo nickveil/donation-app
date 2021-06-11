@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DonorController;
+use App\Models\Donor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DonorController::class, 'show'])->middleware(['auth'])->name('dashboard');
+
+Route::get('donors', [DonorController::class,'donors'])->middleware(['auth'])->name('donors');
 
 require __DIR__.'/auth.php';

@@ -10,4 +10,10 @@ class Donor extends Model
     use HasFactory;
 
     protected $gaurded = [];
+
+    public function showall()
+    {
+        return Donor::all();
+    }
+
 }
