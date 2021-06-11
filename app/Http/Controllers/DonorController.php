@@ -13,4 +13,11 @@ class DonorController extends Controller
             'donors' => Donor::all()
         ]);
     }
+
+    public function show(Donor $donor)
+    {
+        return view('donor',[
+            'donor'=> $donor
+        ]);
+    }
 }

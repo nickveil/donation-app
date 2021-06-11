@@ -21,5 +21,6 @@ Route::get('/', function () {
 
 
 Route::get('donors', [DonorController::class,'donors'])->middleware(['auth'])->name('donors');
+Route::get('/donor/{donor:id}', [DonorController::class,'show'])->middleware(['auth'])->name('donor');
 
 require __DIR__.'/auth.php';

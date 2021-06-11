@@ -59,7 +59,7 @@
                         </td>
                         {{-- TODO: Got to Donor activity (meetings, concerns, donations) --}}
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                            <a href="#" class="text-indigo-600 hover:text-indigo-900">View</a>
+                            <a href="/donor/{{$donor->id}}" class="text-indigo-600 hover:text-indigo-900">View</a>
                         </td>
                     </tr>                
                 @endforeach
@@ -70,8 +70,3 @@
     </div>
   </div>
 </div>
-
-{{-- 
-@foreach ($donors as $donor)
-{{ $donor->name}}
-@endforeach --}}
