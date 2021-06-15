@@ -26,9 +26,9 @@
                 <section class="relative w-full h-full py-40 min-h-screen">
                     <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-full bg-no-repeat"
                         style="background-image: url(img/register_bg_2.png)"></div>
-                    {{-- <div class="font-sans text-gray-900 antialiased"> --}}
-                    {{ $slot }}
-                    {{-- </div> --}}
+                    
+                        {{ $slot }}
+
                     <footer class="absolute w-full bottom-0 bg-blueGray-800 pb-6">
                         <div class="container mx-auto px-4">
                             <hr class="mb-6 border-b-1 border-blueGray-600" />
