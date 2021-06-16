@@ -9,7 +9,7 @@ class DonorController extends Controller
 {
     public function donors()
     {
-        return view('donors', [
+        return view('dashboard', [
             'donors' => Donor::paginate(5)
         ]);
     }

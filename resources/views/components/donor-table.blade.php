@@ -24,11 +24,11 @@
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Unique users
+                                        Phone Number
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Bounce rate
+                                        {{-- intentionally blank--}}
                                     </th>
                                 </tr>
                             </thead>
@@ -54,12 +54,11 @@
                                     </td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        340
+                                        {{$donor->pc_phone_number}}
                                     </td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                                        46,53%
+                                        <a href="/donor/{{$donor->id}}">View</a>
                                     </td>
                                 </tr>
             

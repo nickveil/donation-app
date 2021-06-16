@@ -47,14 +47,14 @@
             </div>
             {{-- TODO: add search functionality --}}
             {{-- <form class="mt-6 mb-4 md:hidden">
-      <div class="mb-3 pt-0">
-        <input
-          type="text"
-          placeholder="Search"
-          class="border-0 px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
-        />
-      </div>
-    </form> --}}
+            <div class="mb-3 pt-0">
+                <input
+                type="text"
+                placeholder="Search"
+                class="border-0 px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+                />
+            </div>
+            </form> --}}
             <!-- Divider -->
             <hr class="my-4 md:min-w-full" />
             <!-- Heading -->
@@ -62,7 +62,6 @@
                 Admin Layout Pages
             </h6>
             <!-- Navigation -->
-
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
                 <li class="items-center">
                     <a href="/donors" class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600">
@@ -70,38 +69,6 @@
                         Dashboard
                     </a>
                 </li>
-
-                {{-- <li class="items-center">
-        <a
-          href="./settings.html"
-          class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-        >
-          <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
-          Settings
-        </a>
-      </li>
-
-      <li class="items-center">
-        <a
-          href="./tables.html"
-          class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-        >
-          <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
-          Tables
-        </a>
-      </li>
-
-      <li class="items-center">
-        <a
-          href="./maps.html"
-          class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-        >
-          <i
-            class="fas fa-map-marked mr-2 text-sm text-blueGray-300"
-          ></i>
-          Maps
-        </a>
-      </li> --}}
             </ul>
 
             <!-- Divider -->
@@ -115,26 +82,19 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
                 {{-- TODO: Add logout functionality --}}
                 <li class="items-center">
-                    <a href="../auth/login.html"
-                        class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block">
-                        <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
-                        Logout
-                    </a>
+
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
                 </li>
-
-                {{-- <li class="items-center">
-        <a
-          href="../auth/register.html"
-          class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-        >
-          <i
-            class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
-          ></i>
-          Register New Member
-        </a>
-      </li> --}}
             </ul>
-
+            {{-- TODO: add ability to register new users and assign them to the campaign --}}
             <hr class="my-4 md:min-w-full" />
             <!-- Heading -->
             <h6 class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
