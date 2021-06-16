@@ -10,7 +10,7 @@ class DonorController extends Controller
     public function donors()
     {
         return view('donors', [
-            'donors' => Donor::all()
+            'donors' => Donor::paginate(5)
         ]);
     }
 
