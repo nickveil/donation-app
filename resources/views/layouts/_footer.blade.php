@@ -1,6 +1,6 @@
 
 
-<footer class="relative md:ml-64 w-full bottom-0 bg-blueGray-800 pb-6">
+<footer class="relative md:ml-64 w-full bottom-0 bg-blueGray-600 pb-6">
     
     <div class="container mx-auto p-4">
 

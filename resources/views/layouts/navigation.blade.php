@@ -64,7 +64,7 @@
             <!-- Navigation -->
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
                 <li class="items-center">
-                    <a href="/donors" class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600">
+                    <a href="/donors" class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         Dashboard
                     </a>
@@ -89,7 +89,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                <i class="fas fa-fingerprint mr-2 text-sm opacity-75"></i>{{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                 </li>

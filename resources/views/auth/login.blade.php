@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    <div class="absolute top-0 w-full h-full bg-blueGray-800 bg-full bg-no-repeat"
+    <div class="absolute top-0 w-full h-full bg-blueGray-600 bg-full bg-no-repeat"
         style="background-image: url(img/register_bg_2.png)"></div>
     <div class="container mx-auto px-4 h-full">
         <div class="flex content-center items-center justify-center h-full">

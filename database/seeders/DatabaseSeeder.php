@@ -35,6 +35,6 @@ class DatabaseSeeder extends Seeder
         //     'name'=>'Friend of Program', 'slug'=>'friend-of-program'
         // ]);
 
-        Donor::factory(25)->create();
+        Donor::factory(50)->create();
     }
 }
