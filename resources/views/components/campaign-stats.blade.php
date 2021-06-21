@@ -37,7 +37,7 @@
                   </div>
                   <p class="text-sm text-blueGray-400 mt-4">
                     <span class="text-emerald-500 mr-2">
-                      {{ $donations}}
+                      {{ $donations }}
                     </span>
                     <span class="whitespace-nowrap">
                       Raised so far.
