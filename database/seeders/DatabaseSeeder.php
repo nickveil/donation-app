@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Campaign;
 use App\Models\Category;
 use App\Models\Donor;
+use App\Models\Donations;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -38,5 +39,6 @@ class DatabaseSeeder extends Seeder
 
         Donor::factory(50)->create();
         Campaign::factory(6)->create();
+        Donations::factory(75)->create();
     }
 }

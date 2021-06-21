@@ -21,8 +21,16 @@ class DonationsFactory extends Factory
      */
     public function definition()
     {
+        $campaign = [1,2,3,4,5,6];
+        $don_id = range(1,50,1);
+        $campaign = array_rand(array_flip($campaign));
+        $don_id = array_rand(array_flip($don_id));
+
         return [
-            //
+            'campaigns_id' => $campaign,
+            'donors_id' => $don_id,
+            'donation_amount' => $this->faker->randomFloat(0 ,500, 10000),
+            'donation_date' => now()
         ];
     }
 }

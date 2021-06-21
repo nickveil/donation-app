@@ -35,7 +35,7 @@ class CampaignFactory extends Factory
             'earmark' => $this->faker->realText(15,2),
             'isActive' => $this->faker->boolean(75),
             'current_donations' => $this->faker->randomFloat(0 ,500, 10000),
-            'goal' => $this->faker->randomFloat(0 ,500, 100000),
+            'goal' => $this->faker->randomFloat(0 ,500, 50000),
             'campaign_start' => $startDate,
             'campaign_end' => $endDate,
         ];
