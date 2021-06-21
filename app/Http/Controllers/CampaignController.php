@@ -14,4 +14,11 @@ class CampaignController extends Controller
             // Donor::query("SELECT * FROM donors WHERE category_id = 1 ")
         ]);
     }
+
+    public function show(Campaign $campaign)
+    {
+        return view('campaign',[
+            'campaign'=> $campaign
+        ]);
+    }
 }

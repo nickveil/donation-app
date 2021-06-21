@@ -15,7 +15,7 @@ class CampaignStats extends Component
     public function render()
     {
         return view('components.campaign-stats', [
-            'campaigns' => Campaign::all(),
+            'campaigns' => Campaign::where('isActive', '=', 1)->get(),
         ]);
     }
 }
