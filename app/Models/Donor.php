@@ -11,11 +11,6 @@ class Donor extends Model
 
     protected $gaurded = [];
 
-    // public function showall()
-    // {
-    //     return Donor::all();
-    // }
-
     public function category()
     {
         return $this->belongsTo(Category::class);
