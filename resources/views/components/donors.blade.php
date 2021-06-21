@@ -4,9 +4,5 @@
     <x-campaign-stats />
     @if($donors->count())
       <x-donor-table :donors="$donors" />
-      <x-donor-table :donors="$donors" />
-      <x-donor-table :donors="$donors" />
-    @else
-      "No Donors assigned yet"
     @endif
 </div>

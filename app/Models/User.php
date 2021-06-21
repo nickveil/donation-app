@@ -11,6 +11,11 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Campaign;
 use App\Models\Category;
 use App\Models\Donor;
 use App\Models\User;
@@ -36,5 +37,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Donor::factory(50)->create();
+        Campaign::factory(6)->create();
     }
 }

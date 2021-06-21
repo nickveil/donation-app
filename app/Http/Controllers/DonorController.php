@@ -10,8 +10,10 @@ class DonorController extends Controller
     public function donors()
     {
         return view('dashboard', [
-            'donors' => Donor::where('category_id', '=', 1)
-                                    ->paginate(5)
+            'donors' => Donor::paginate(5),
+            'companies' => Donor::where('category_id', '=', 1)->paginate(5),
+            'families' => Donor::where('category_id', '=', 2)->paginate(5),
+            'friends' => Donor::where('category_id', '=', 3)->paginate(5),
             // Donor::query("SELECT * FROM donors WHERE category_id = 1 ")
         ]);
     }
