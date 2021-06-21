@@ -13,4 +13,9 @@ class Campaign extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function donations()
+    {
+        return $this->hasMany(Donations::class);
+    }
 }

@@ -1,4 +1,4 @@
-@props(['campaigns'])
+@props(['campaigns', 'donations'])
 {{-- <x-donors> --}}
 <!-- Header -->
   <div class="relative bg-blueGray-600 md:pt-32 pb-32 pt-12">
@@ -37,7 +37,7 @@
                   </div>
                   <p class="text-sm text-blueGray-400 mt-4">
                     <span class="text-emerald-500 mr-2">
-                      {{ $campaign->current_donations}}
+                      {{ $donations}}
                     </span>
                     <span class="whitespace-nowrap">
                       Raised so far.
