@@ -7,16 +7,16 @@
         <!-- Card stats -->
         <div class="flex flex-wrap">
           @foreach ($campaigns as $campaign)
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+            <div class="w-full lg:w-6/12 xl:w-3/12 px-4 mb-6">
               <div
-                class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg"
+                class="relative flex flex-col min-w-0 break-words bg-white rounded xl:mb-0 shadow-lg"
               >
                 <div class="flex-auto p-4">
                   <div class="flex flex-wrap">
-                    <a href="/campaign/{{$campaign->id }}">
-                      <div
-                        class="relative w-full pr-4 max-w-full flex-grow flex-1"
-                      >
+                    <div
+                      class="relative w-full pr-4 max-w-full flex-grow flex-1"
+                    >
+                      <a href="/campaign/{{$campaign->id }}">
                         <h5
                           class="text-blueGray-400 uppercase font-bold text-xs"
                         >
@@ -25,8 +25,8 @@
                         <span class="font-semibold text-xl text-blueGray-700">
                           {{ $campaign->goal}}
                         </span>
-                      </div>
-                    </a>
+                      </a>
+                    </div>
                     <div class="relative w-auto pl-4 flex-initial">
                       <div
                         class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500"

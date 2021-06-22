@@ -29,7 +29,7 @@ class DonationsFactory extends Factory
         return [
             'campaigns_id' => $campaign,
             'donors_id' => $don_id,
-            'donation_amount' => $this->faker->randomFloat(0 ,500, 10000),
+            'donation_amount' => $this->faker->randomFloat(0 ,25, 100),
             'donation_date' => now()
         ];
     }
