@@ -7,7 +7,7 @@
         <!-- Card stats -->
         <div class="flex flex-wrap">
           @foreach ($campaigns as $campaign)
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-4 mb-6">
+            <div class="w-full lg:w-6/12 xl:w-4/12 px-4 mb-6">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white rounded xl:mb-0 shadow-lg"
               >
@@ -29,14 +29,14 @@
                     </div>
                     <div class="relative w-auto pl-4 flex-initial">
                       <div
-                        class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500"
+                        class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full {{ $campaign->goal>$donations[$campaign->id] ? 'bg-red-500' : 'bg-green-500'}} "
                       >
                         <i class="far fa-chart-bar"></i>
                       </div>
                     </div>
                   </div>
                   <p class="text-sm text-blueGray-400 mt-4">
-                    <span class="text-emerald-500 mr-2">
+                    <span class=" {{ $campaign->goal>$donations[$campaign->id] ? 'text-red-500' : 'text-green-500'}}  mr-2">
                       {{ $donations[$campaign->id]}}
                     </span>
                     <span class="whitespace-nowrap">
