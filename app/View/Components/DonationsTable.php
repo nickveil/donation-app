@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Campaign;
 use App\Models\Donations;
 use Illuminate\View\Component;
 
@@ -25,7 +26,8 @@ class DonationsTable extends Component
     public function render()
     {
         return view('components.donations-table',[
-            'donationList' => Donations::where('donors_id','=',1)->get()
+            'donationList' => Donations::where('donors_id','=',1)->orderByDesc('donation_date')->get(),
+            'campaigns' => Campaign::all(),
         ]);
     }
 }

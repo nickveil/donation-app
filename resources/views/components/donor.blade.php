@@ -2,7 +2,7 @@
 
 <div class="relative md:ml-64 bg-blueGray-50">
     <main class="profile-page">
-        <section class="relative block h-500-px">
+        <section class="relative block h-350-px">
           <div
             class="absolute top-0 w-full h-full bg-center bg-cover"
             style="
@@ -89,32 +89,55 @@
                     ></i>
                     Los Angeles, California
                   </div>
-                  <div class="mb-2 text-blueGray-600 mt-10">
-                    <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i
-                    >{{ $donor->primary_contact_name }}
+                  <div class="space-x-4 mb-2">
+                    <div class="inline-block text-blueGray-600">
+                      {{ $donor->primary_contact_name }}  
+                    </div>
+                    <div class="inline-block text-blueGray-600">
+                      |
+                    </div>
+                    <div class="inline-block text-blueGray-600">
+                      {{ $donor->pc_phone_number}}
+                    </div>
+                    <div class="inline-block text-blueGray-600">
+                      |
+                    </div>
+                    <div class="inline-block text-blueGray-600">
+                      {{ $donor->pc_email}}
+                    </div>
                   </div>
-                  <div class="mb-2 text-blueGray-600">
-                    <i
-                      class="fas fa-university mr-2 text-lg text-blueGray-400"
-                    ></i
-                    >{{ $donor->pc_phone_number}}
-                  </div>
-                  <div class="mb-2 text-blueGray-600">
-                    <i
-                      class="fas fa-university mr-2 text-lg text-blueGray-400"
-                    ></i
-                    >{{ $donor->pc_email}}
+                </div>
+                <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+                  <div class="flex flex-wrap justify-center">
+                    <div class="w-full lg:w-9/12 px-4">
+                      <div class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                        <x-donations-table  />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
                   <div class="flex flex-wrap justify-center">
                     <div class="w-full lg:w-9/12 px-4">
                       <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                        <x-donations-table  />
+                        <div class="space-x-4 mb-2">
+                          <div class="inline-block text-blueGray-600">
+                            {{ $donor->primary_contact_name }}  
+                          </div>
+                          <div class="inline-block text-blueGray-600">
+                            |
+                          </div>
+                          <div class="inline-block text-blueGray-600">
+                            {{ $donor->pc_phone_number}}
+                          </div>
+                          <div class="inline-block text-blueGray-600">
+                            |
+                          </div>
+                          <div class="inline-block text-blueGray-600">
+                            {{ $donor->pc_email}}
+                          </div>
+                        </div>
                       </p>
-                      <a href="#pablo" class="font-normal text-pink-500"
-                        >Show more</a
-                      >
                     </div>
                   </div>
                 </div>

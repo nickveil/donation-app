@@ -30,7 +30,7 @@ class DonationsFactory extends Factory
             'campaigns_id' => $campaign,
             'donors_id' => $don_id,
             'donation_amount' => $this->faker->randomFloat(0 ,25, 100),
-            'donation_date' => now()
+            'donation_date' => $this->faker->dateTimeThisDecade('now')->format('Y-m-d')
         ];
     }
 }
