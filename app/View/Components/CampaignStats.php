@@ -16,7 +16,7 @@ class CampaignStats extends Component
 
     public function render()
     {
-        // This works but I think it can be cleaned up
+        // TODO: This works but I think it can be cleaned up
         
         $campaigns = Campaign::where('isActive', '=', 1)->get();
         $totalDonations =[];

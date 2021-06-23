@@ -6,7 +6,7 @@
           <div
             class="absolute top-0 w-full h-full bg-center bg-cover"
             style="
-              background-image: url('https://images.unsplash.com/photo-1623156884380-a080a56ddc93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80');
+              background-image: url('https://picsum.photos/1500/1000?grayscale');
             "
           >
             <span
@@ -47,7 +47,7 @@
                     <div class="relative">
                       <img
                         alt="..."
-                        src="/img/team-3-800x800.jpg"
+                        src="https://picsum.photos/300?blur=1"
                         class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                       />
                     </div>
@@ -110,7 +110,7 @@
                   <div class="flex flex-wrap justify-center">
                     <div class="w-full lg:w-9/12 px-4">
                       <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
-                        Previous donations will fill this area!
+                        <x-donations-table  />
                       </p>
                       <a href="#pablo" class="font-normal text-pink-500"
                         >Show more</a
