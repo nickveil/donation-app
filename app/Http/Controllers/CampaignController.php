@@ -21,4 +21,9 @@ class CampaignController extends Controller
             'campaign'=> $campaign
         ]);
     }
+
+    public function getCampaign(Campaign $campaign)    
+    {
+        return 'Campaign Controller. Id is:'.$campaign->id;
+    }
 }

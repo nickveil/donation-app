@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::get('donors', [DonorController::class,'donors'],[CampaignController::class, 'campaign'])->middleware(['auth'])->name('donors');
 Route::get('/donor/{donor:id}', [DonorController::class,'show'])->middleware(['auth'])->name('donor');
-Route::get('/campaign/{campaign:id}', [CampaignController::class,'show'])->middleware(['auth'])->name('donor');
+
+Route::get('/campaign/{campaign:id}', [CampaignController::class,'show'])->middleware(['auth'])->name('capaign');
+Route::get('/campaign/update/{campaign:id}', [CampaignController::class,'getCampaign'])->middleware(['auth'])->name('campaign');
 
 require __DIR__.'/auth.php';
