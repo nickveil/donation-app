@@ -24,4 +24,23 @@ class DonorController extends Controller
             'donor'=> $donor
         ]);
     }
+
+    public function edit(Donor $donor)    
+    {
+        return view('components.update-donor', [
+            'donor' => $donor
+        ]);
+    }
+
+    public function update(Donor $donor, Request $request )    
+    {
+
+        $donor->name = $request->name;
+        $donor->primary_contact_name = $request->primary_contact_name;
+        $donor->pc_phone_number = $request->pc_phone_number ;
+        $donor->pc_email = $request->pc_email;
+        $donor->save();
+
+        return redirect('/donor/'.$donor->id);
+    }
 }

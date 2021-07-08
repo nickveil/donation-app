@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::get('donors', [DonorController::class,'donors'],[CampaignController::class, 'campaign'])->middleware(['auth'])->name('donors');
 Route::get('/donor/{donor:id}', [DonorController::class,'show'])->middleware(['auth'])->name('donor');
+Route::get('/donor/{donor:id}/edit', [DonorController::class,'edit'])->middleware(['auth'])->name('editDonor');
+Route::put('/donor/update/{donor:id}', [DonorController::class,'update'])->middleware(['auth'])->name('updateDonor');
 
 Route::get('/campaign/{campaign:id}', [CampaignController::class,'show'])->middleware(['auth'])->name('capaign');
 Route::get('/campaign/{campaign:id}/edit', [CampaignController::class,'edit'])->middleware(['auth'])->name('editCampaign');
