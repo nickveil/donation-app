@@ -1,4 +1,4 @@
-{{-- @props(['campaign']) --}}
+
 <x-app-layout>
   
   <div class="relative md:ml-64 bg-blueGray-50">
@@ -35,7 +35,53 @@
               </svg>
             </div>
           </section>
-          <section class="relative py-16 bg-blueGray-200">
+
+          <section class="relative block h-500-px">
+              <div class="flex-auto px-4 lg:px-8 py-8 pt-5">
+                <form method="POST" action="/campaign/update/{{ $campaign->id }}">
+                    
+                    @method('PUT')
+                    @csrf
+    
+                    <!-- Email Address -->
+                    <div>
+                        <x-label for="name" :value="__('Name')" />
+                        <x-input id="name" class="block mt-1 w-full" type="string" name="name"
+                            value="{{$campaign->name}}" />
+
+                        <x-label for="earmark" :value="__('Earmark')" />
+                        <x-input id="earmark" class="block mt-1 w-full" type="string" name="earmark"
+                            value="{{$campaign->earmark}}" />
+
+                        <x-label for="goal" :value="__('Goal')" />
+                        <x-input id="goal" class="block mt-1 w-full" type="string" name="goal"
+                            value="{{$campaign->goal}}" />
+
+
+                    </div>
+                    {{-- <input type="hidden" name="_method" value="PUT"> --}}
+                    <div class="text-center mt-6">
+                        <x-button class="ml-3">
+                            {{ __('Update') }}
+                        </x-button>
+                    </div>
+                </form>
+              </div>
+          </section>
+
+          {{-- <form action="{{route('updateCampaign','name')}}" method="post">
+            @csrf
+            <label for="name">Name</label>
+            <input type="string" value="{{$campaign->name}}" id="name">
+            <div class="text-center mt-6">
+                <x-button class="ml-3">
+                    {{ __('Update') }}
+                </x-button>
+            </div>
+          </form> --}}
+
+
+          {{-- <section class="relative py-16 bg-blueGray-200">
             <div class="container mx-auto px-4">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
@@ -57,19 +103,19 @@
                       class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
                     >
                       <div class="py-6 px-3 mt-32 sm:mt-0">
-                        {{-- <a href="/campaign/{{$campaign->id }}"
+                        <a href="/campaign/{{$campaign->id }}"
                           class="bg-blueGray-800 uppercase text-white font-bold  shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                           type="button"
-                        > --}}
-                        {{-- <form action="/campaign/{{$campaign->id}}/edit">
-                          @csrf --}}
-                          <a href="/campaign/{{$campaign->id}}/edit"
+                        >
+                        <form action="/campaign/update/{{$campaign->id}}">
+                          @csrf
+                          <button type="submit"
                                   class="bg-blueGray-800 uppercase text-white font-bold  shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                           >
                             Update
-                          </a>
-                        {{-- </form>
-                        </a> --}}
+                          </button>
+                        </form>
+                        </a>
                       </div>
                     </div>
                     <div class="w-full lg:w-4/12 px-4 lg:order-1">
@@ -134,7 +180,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> --}}
         </main>
   </div>
 </x-app-layout>
